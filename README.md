@@ -2,7 +2,15 @@
 
 ## Introduction
 
-This project experiments communication between machines using websocket. 
+This project experiments communication between machines using websocket.
+There is essentially four tiers: application, agent, proxy and the management
+system. Each tier only communicates directly with its neiboughing tier, and
+different communication mechanism was employed between tiers. However,
+a unified addressing scheme was defined to facilitate any-to-any communication.
+
+<img src="arch.png" width="400">
+
+ 
 The scenario is as follows
 
 1. There is one agent and one or more applications running on each 
@@ -31,8 +39,6 @@ The scenario is as follows
    
 6. Communication can be initiated by any endpoint in the system, it can
    be request-response based or simply oneway (notification).
-
-<img src="arch.png" width="400">
 
 ## Some notes
 
