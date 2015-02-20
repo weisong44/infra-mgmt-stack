@@ -49,7 +49,9 @@ The scenario is as follows
    based messaging system solves this problem elegantly. 
  - The system is in theory horizontal scalable, however in this implementation
    it is limited by Hazelcast. It seems the Hazelcast topics can support
-   a throughput of up to 5-10 thousand messages per second.
+   a throughput of up to 5-10 thousand messages per second. With one message
+   per application per minute, this leaves us with about 300-600K applications,
+   which is still plenty.
  - Overall, this systems seemed complicated with a fair amount of edge cases
    waiting to be sorted out. From this to production seemed a long way to go.
 
