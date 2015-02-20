@@ -1,0 +1,32 @@
+<hazelcast-client xsi:schemaLocation=
+    "http://www.hazelcast.com/schema/client-config hazelcast-client-config-3.3.xsd"
+                  xmlns="http://www.hazelcast.com/schema/client-config"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <group>
+        <name>james</name>
+        <password>bond</password>
+    </group>
+
+    <properties>
+        <property name="hazelcast.client.connection.timeout">1000</property>
+        <property name="hazelcast.client.retry.count">6</property>
+    </properties>
+
+    <!--Network configuration details-->
+    <network>
+        <cluster-members>
+            <address>127.0.0.1:7001</address>
+            <address>127.0.0.1:7002</address>
+            <address>127.0.0.1:7003</address>
+        </cluster-members>
+        <smart-routing>true</smart-routing>
+        <redo-operation>true</redo-operation>
+    	<connection-attempt-limit>2147483647</connection-attempt-limit>
+    </network>
+
+    <load-balancer type="random"/>
+
+	<!-- <management-center enabled="true">http://localhost:8080/mancenter</management-center> -->
+	
+</hazelcast-client>

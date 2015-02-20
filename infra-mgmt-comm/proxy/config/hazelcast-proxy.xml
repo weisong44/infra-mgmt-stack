@@ -1,0 +1,22 @@
+<hazelcast xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.hazelcast.com/schema/config
+                               http://www.hazelcast.com/schema/config/hazelcast-config-3.2.xsd"
+	xmlns="http://www.hazelcast.com/schema/config">
+	<group>
+		<name>james</name>
+		<password>bond</password>
+	</group>
+	<network>
+		<port>7001</port>
+		<join>
+			<multicast enabled="false"/>
+			<tcp-ip enabled="true">
+				<member>127.0.0.1:7001</member>
+				<member>127.0.0.1:7002</member>
+				<member>127.0.0.1:7003</member>
+			</tcp-ip>
+		</join>
+	</network>
+
+	<!-- <management-center enabled="true">http://localhost:8080/mancenter</management-center> -->
+</hazelcast>
