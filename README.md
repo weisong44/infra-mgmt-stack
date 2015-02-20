@@ -58,4 +58,4 @@ The scenario is as follows
 ## TODO
 
  - Look into Akka actor as an alternative
- 
+ - Explore other paradigms (see infra-mgmt-monitor)
